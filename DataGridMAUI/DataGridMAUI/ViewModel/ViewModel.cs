@@ -1,11 +1,15 @@
-# bind-the-datatable-collection-to-.net-maui-datagrid
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
 
-The .NET [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)(SfDataGrid) listens and respond to CRUD operations such as add, delete and data update (property change) at runtime. DataGrid automatically refresh the UI when rows are added, deleted or cleared.
-
-## C#
-Implement the collection with [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-7.0) interface.
-
-```C#
+namespace DataGridMAUI
+{
     public class ViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<OrderInfo> orderInfo;
@@ -58,20 +62,4 @@ Implement the collection with [INotifyPropertyChanged](https://learn.microsoft.c
 
         #endregion
     }
-```
-
-## XAML
-Bind the ViewModel collection to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property and a new data to the ViewModel collection on button click.
-
-```XAML
- <StackLayout >
-        <Button Command="{Binding ButtonCommand}" Text="AddRow"></Button>
-        <syncfusion:SfDataGrid x:Name="dataGrid" AutoGenerateColumnsMode="None" VerticalOptions="FillAndExpand" ItemsSource="{Binding OrderInfoCollection}" DefaultColumnWidth="130" GridLinesVisibility="Both" HeaderGridLinesVisibility="Both">
-            <syncfusion:SfDataGrid.Columns>
-                <syncfusion:DataGridNumericColumn MappingName="OrderID" Format="D" HeaderText="ID"></syncfusion:DataGridNumericColumn>
-                <syncfusion:DataGridTextColumn MappingName="Customer" HeaderText="Name"></syncfusion:DataGridTextColumn>
-                <syncfusion:DataGridTextColumn MappingName="Country"></syncfusion:DataGridTextColumn>
-            </syncfusion:SfDataGrid.Columns>
-        </syncfusion:SfDataGrid>
-    </StackLayout>
-```
+}
