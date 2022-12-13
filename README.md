@@ -1,6 +1,6 @@
 # bind-the-datatable-collection-to-.net-maui-datagrid
 
-The .NET [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)(SfDataGrid) listens and respond to CRUD operations such as add, delete and data update (property change) at runtime. DataGrid automatically refresh the UI when rows are added, deleted or cleared.
+The .NET [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)(SfDataGrid) listens and respond to the CRUD operations such as add, delete and data update (property change) at runtime. DataGrid automatically refresh the UI when rows are added, deleted or cleared.
 
 ## C#
 Implement the collection with [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-7.0) interface.
@@ -61,7 +61,7 @@ Implement the collection with [INotifyPropertyChanged](https://learn.microsoft.c
 ```
 
 ## XAML
-Bind the ViewModel collection to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property and a new data to the ViewModel collection on button click.
+Bind the ViewModel collection to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property and a new data to the ViewModel collection with a button click.
 
 ```XAML
  <StackLayout >
