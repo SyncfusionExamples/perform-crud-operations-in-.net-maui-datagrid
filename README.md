@@ -1,4 +1,4 @@
-# bind-the-datatable-collection-to-.net-maui-datagrid
+# Perform the CRUD operations in .net maui datagrid
 
 The .NET [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid)(SfDataGrid) listens and respond to the CRUD operations such as add, delete and data update (property change) at runtime. DataGrid automatically refresh the UI when rows are added, deleted or cleared.
 
